@@ -3,6 +3,7 @@
 
 
 class Square:
+    """Creating an attribute"""
     def __init__(self, size=0):
 
         """Validating the value"""
