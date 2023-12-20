@@ -3,4 +3,5 @@
 
 
 class Square:
+    """skipping an empty class"""
     pass
