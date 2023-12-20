@@ -3,8 +3,8 @@
 
 
 class Square:
+    """Initialsing a class"""
     def __init__(self, size=0):
-
         """Validating and hadling error"""
         if type(size) is not int:
             raise TypeError("size must be an integer")
