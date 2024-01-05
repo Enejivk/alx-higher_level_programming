@@ -44,7 +44,7 @@ class Rectangle:
             return 0
         add_para = self.__height + self.__width
         return 2 * add_para
-    
+
     def __str__(self):
         rectanglePattern = ""
         for i in range(self.__height):
@@ -52,4 +52,3 @@ class Rectangle:
                 rectanglePattern += "#"
             rectanglePattern += "\n"
         return rectanglePattern[:-1]
-    
