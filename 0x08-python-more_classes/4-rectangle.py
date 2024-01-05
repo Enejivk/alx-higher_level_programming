@@ -54,7 +54,7 @@ class Rectangle:
                 rectanglePattern += "#"
             rectanglePattern += "\n"
         return rectanglePattern[:-1]
-    
+
     def __repr__(self):
         """It return the string representation that can be passed to oval()"""
         return "Rectangle({}, {})" .format(self.__width, self.__height)
