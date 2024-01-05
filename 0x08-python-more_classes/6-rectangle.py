@@ -3,11 +3,13 @@
 
 
 class Rectangle:
+    """Creating a class attribute"""
     number_of_instances = 0
     """Creating a private instance of width and height"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        """Increasing the class attribute"""
         Rectangle.number_of_instances += 1
 
     @property
@@ -64,4 +66,5 @@ class Rectangle:
     def __del__(self):
         """checking if instance rectangle was deleted"""
         print("Bye rectangle...")
+        """Decreasing the class attribute"""
         Rectangle.number_of_instances -= 1
