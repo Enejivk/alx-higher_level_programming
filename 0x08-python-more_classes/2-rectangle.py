@@ -33,13 +33,13 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
+
     def area(self):
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return self.__height * self.__width
-        
+
     def perimeter(self):
         add_para = self.__height + self.__width
         return 2 * add_para
