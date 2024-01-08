@@ -1,0 +1,34 @@
+This modules contain function that says the first and the last name
+    Argument
+    last_name = This is the last name
+    first_name = This is the first name
+    
+    Testing Argument
+    int_first_name = this is the first name made with just number
+    int_last_name = this is the last name made up of just numbers
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> first_name = "John"
+>>> int_first_name = 12345456
+>>> last_name = "Smith"
+>>> empty_last_name = ""
+>>> int_last_name = 1234534
+
+>>> say_my_name(int_first_name, last_name)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(first_name, int_last_name)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name(int_first_name, int_last_name)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name(first_name, last_name)
+My name is John Smith
+
+>>> say_my_name(first_name, empty_last_name)
+My name is John 
