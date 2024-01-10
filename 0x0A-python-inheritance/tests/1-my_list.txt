@@ -18,22 +18,40 @@ testing list
 
 >>> print(my_list)
 [1, 4, 2, 3]
->>> print(my_list)
-[1, 4, 2, 3]
 >>> my_list.print_sorted()
 [1, 2, 3, 4]
+>>> print(my_list)
+[1, 4, 2, 3]
+
+
 >>> my_list.append(-2)
+>>> print(my_list)
+[1, 4, 2, 3, -2]
 >>> my_list.print_sorted()
 [-2, 1, 2, 3, 4]
+>>> print(my_list)
+[1, 4, 2, 3, -2]
 
 >>> my_list.append(-2)
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2]
 >>> my_list.print_sorted()
 [-2, -2, 1, 2, 3, 4]
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2]
 
 >>> my_list.append(100000000000000000000)
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2, 100000000000000000000]
 >>> my_list.print_sorted()
 [-2, -2, 1, 2, 3, 4, 100000000000000000000]
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2, 100000000000000000000]
 
 >>> my_list.append(float('inf'))
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2, 100000000000000000000, inf]
 >>> my_list.print_sorted()
 [-2, -2, 1, 2, 3, 4, 100000000000000000000, inf]
+>>> print(my_list)
+[1, 4, 2, 3, -2, -2, 100000000000000000000, inf]
