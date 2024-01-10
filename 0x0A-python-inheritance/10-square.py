@@ -34,9 +34,10 @@ class Rectangle(BaseGeometry):
 
 
 """Creating another derived class"""
+
+
 class Square(Rectangle):
     """Initialising the variable using the init function"""
-
     def __init__(self, size):
         """initialization method"""
         self.integer_validator('size', size)
