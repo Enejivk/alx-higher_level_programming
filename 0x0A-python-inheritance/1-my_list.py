@@ -4,6 +4,4 @@
         
 class MyList(list):
     def print_sorted(self):
-        new_list_ = self.copy()
-        new_list_.sort()
-        print(new_list_)
+        print(sorted(self))
