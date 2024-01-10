@@ -1,3 +1,5 @@
+This modules contains test script for 1_my_list.py
+
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list = MyList()
