@@ -1,4 +1,4 @@
-#!/usr/bin/pyyhon3
+#!/usr/bin/python3
 """Checking if it is an object or a class"""
 
 
