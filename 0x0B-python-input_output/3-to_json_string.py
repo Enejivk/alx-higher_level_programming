@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""Defines a string-to-JSON function."""
+"""jason reprsentation of a dictionary"""
+
 import json
-
-
 def to_json_string(my_obj):
-    """Return the JSON representation of a string object."""
-    return json.dumps(my_obj)
+    """This funtion return a dictionary"""
+    return json.dumps(my_obj, sort_keys="true")
