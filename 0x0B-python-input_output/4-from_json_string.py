@@ -1,18 +1,8 @@
 #!/usr/bin/python3
-"""Module 4-from_json_string.
-Returns an object (Python data structure)
-represented by a JSON string.
-"""
-
-
+"""jason reprsentation of a dictionary"""
 import json
 
 
 def from_json_string(my_str):
-    """Return the object represented my my_str.
-    Args:
-        - my_str: JSON string representation
-    Returns: corresponding object
-    """
-
+    """This funtion return a dictionary"""
     return json.loads(my_str)
