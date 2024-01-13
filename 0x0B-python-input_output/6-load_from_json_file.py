@@ -1,13 +1,10 @@
 #!/usr/bin/python3
-# -----------------------------------------------------------
-# Python program that:
-# demonstrates how to print a dictionary by ordered keys
-#
-# (C) 2022 Igbinijesu Samuel, Lagos, Nigeria
-# email igbinijesusamuel@gmail.com
-# -----------------------------------------------------------
+"""Code that load content from a jsons file"""
+import json
 
 
-def print_sorted_dictionary(a_dictionary):
-    for key in sorted(a_dictionary):
-        print("{:s}: {}".format(key, a_dictionary[key]))
+def load_from_json_file(filename):
+    """Print the content of jason file"""
+    with open(filename, "r", encoding="utf8") as file:
+        fileread = file.read()
+        return json.loads(fileread)
