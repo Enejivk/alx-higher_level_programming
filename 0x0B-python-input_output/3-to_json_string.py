@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """jason reprsentation of a dictionary"""
 
+
 import json
 def to_json_string(my_obj):
     """This funtion return a dictionary"""
