@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import json
+"""save save string to json file"""
 
 
 def save_to_json_file(my_obj, filename):
