@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-# -----------------------------------------------------------
-# Python program that:
-# demonstrates how to replace or add key/value in a dictionary
-#
-# (C) 2022 Igbinijesu Samuel, Lagos, Nigeria
-# email igbinijesusamuel@gmail.com
-# -----------------------------------------------------------
+import sys
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+"""Importing the module the module need"""
 
 
-def update_dictionary(a_dictionary, key, value):
-    if key not in a_dictionary:
-        a_dictionary[key] = value
-    else:
-        for i in a_dictionary:
-            if i == key:
-                a_dictionary[i] = value
-    return a_dictionary
+mylist = []
+for i in range(1, len(sys.argv)):
+    mylist.append(sys.argv[i])
+try:
+    my_list = load_from_json_file("add_item.json")
+except FileNotFoundError:
+    my_list = []
+mylist.extend(my_list)
+save_to_json_file(mylist, "add_item.json")
