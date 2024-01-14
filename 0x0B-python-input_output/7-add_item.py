@@ -12,5 +12,6 @@ try:
     my_list = load_from_json_file("add_item.json")
 except FileNotFoundError:
     my_list = []
-mylist.extend(my_list)
-save_to_json_file(mylist, "add_item.json")
+    """Extending the contennt of the initial list"""
+my_list.extend(mylist)
+save_to_json_file(my_list, "add_item.json")
