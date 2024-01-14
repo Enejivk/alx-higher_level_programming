@@ -17,11 +17,15 @@ class Student:
     def to_json(self, attrs=None):
         """ It This funtion returns dictionary of all the attribute """
         attribute_dict = vars(self)
-        if attrs == None:
-            return attribute_dict
+        
+        if type(attrs) is list:
+            for item in attrs:
+                if type(item) is not str:
+                    return attribute_dict
 
-        newattribute_dict = {}
-        for key in attrs:
-            if key in attribute_dict:
-                newattribute_dict[key] = attribute_dict[key]
-        return newattribute_dict
+            newattribute_dict = {}
+            for key in attrs:
+                if key in attribute_dict:
+                    newattribute_dict[key] = attribute_dict[key]
+            return newattribute_dict
+        return attribute_dict
