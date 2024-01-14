@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""Add all the command line argurment to a list"""
 import sys
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-"""Importing the module the module need"""
+
+if __name__ == "__main__":
+    save_to_json_file = \
+        __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = \
+        __import__('6-load_from_json_file').load_from_json_file
 
 
 mylist = []
