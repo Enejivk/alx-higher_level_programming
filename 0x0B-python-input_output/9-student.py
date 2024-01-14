@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-# -----------------------------------------------------------
-# Python program that:
-# demonstrates how to return a new dictionary with all values multiplied by 2
-#
-# (C) 2022 Igbinijesu Samuel, Lagos, Nigeria
-# email igbinijesusamuel@gmail.com
-# -----------------------------------------------------------
+"""
+Student class module
+"""
 
 
-def multiply_by_2(a_dictionary):
-    new_dict = a_dictionary.copy()
-    for key, value in new_dict.items():
-        new_dict[key] = value * 2
-    return new_dict
+class Student:
+    """Student class
+    """
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        """This function return a dictionary representation of class"""
+        return vars(self)
