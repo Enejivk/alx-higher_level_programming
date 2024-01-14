@@ -17,7 +17,7 @@ class Student:
     def to_json(self, attrs=None):
         """ It This funtion returns dictionary of all the attribute """
         attribute_dict = vars(self)
-        
+
         if type(attrs) is list:
             for item in attrs:
                 if type(item) is not str:
