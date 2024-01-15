@@ -27,13 +27,7 @@ class Student:
         return newattribute_dict
 
     def reload_from_json(self, json):
-        """Reload_from_json: It takes an attribute of self
-        and convert it to the respective value stored in json.
-        Arg
-        self: This contain all the attribute of the object
-        json: This is contain the value to be replace with the value in
-        self.
-        """
+        """Reload_from_json: It takes an attribute of self"""
         self.age = json['age']
         self.first_name = json['first_name']
         self.last_name = json['last_name']
