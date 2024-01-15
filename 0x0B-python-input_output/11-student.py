@@ -28,6 +28,5 @@ class Student:
 
     def reload_from_json(self, json):
         """Reload_from_json: It takes an attribute of self"""
-        self.age = json['age']
-        self.first_name = json['first_name']
-        self.last_name = json['last_name']
+        for key in json:
+            self.__dict__[key] = json[key]
