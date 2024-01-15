@@ -1,41 +1,39 @@
 #!/usr/bin/python3
-"""Defines a class Student."""
+"""
+Student class module
+"""
 
 
 class Student:
-    """Represent a student."""
+    """Student class
+    """
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
-        """
+        """Initialize the conten of student module"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """Get a dictionary representation of the Student.
+        """ It This funtion returns dictionary of all the attribute """
+        attribute_dict = vars(self)
+        if attrs is None:
+            return attribute_dict
 
-        If attrs is a list of strings, represents only those attributes
-        included in the list.
-
-        Args:
-            attrs (list): (Optional) The attributes to represent.
-        """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
-
+        newattribute_dict = {}
+        for key in attrs:
+            if key in attribute_dict:
+                newattribute_dict[key] = attribute_dict[key]
+        return newattribute_dict
+    
     def reload_from_json(self, json):
-        """Replace all attributes of the Student.
-
-        Args:
-            json (dict): The key/value pairs to replace attributes with.
+        """Reload_from_json: It takes an attribute of self
+        and convert it to the respective value stored in json.
+        Arg
+        self: This contain all the attribute of the object
+        json: This is contain the value to be replace with the value in 
+        self.
         """
-        for k, v in json.items():
-            setattr(self, k, v)
+        self.age = json['age']
+        self.first_name = json['first_name']
+        self.last_name = json['last_name']
