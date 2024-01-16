@@ -27,12 +27,7 @@ class Base:
 
 
 class Rectangle(Base):
-    """Rectagle class inherite from Base class
-    """
-
     def __init__(self, width, height, x=0, y=0, id=None):
-        """It initialize all the value found in rectangle
-        """
         super().__init__(id)
         self.width = width
         self.height = height
