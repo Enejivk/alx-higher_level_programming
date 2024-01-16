@@ -104,6 +104,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args):
+        """printing a list of value passed by command line argument"""
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
