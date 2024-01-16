@@ -103,7 +103,7 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """printing a list of value passed by command line argument"""
         if len(args) >= 1:
             self.id = args[0]
