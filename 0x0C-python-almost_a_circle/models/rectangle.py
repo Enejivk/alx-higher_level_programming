@@ -1,46 +1,16 @@
 #!/usr/bin/python3
-"""Creating a Base class
-"""
+"""calculating rectagle module"""
 
 
-class Base:
-    """__nb_objects:
-    Creating class attribute that keep tracks of the
-    the numbers of objects
-    """
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-        """This function initialise value of id
-        it checks if id is None if true it returns the number
-        of object instead
-
-        Args:
-            id: holds the value of id.
-        """
-
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects = Base.__nb_objects + 1
-            self.id = Base.__nb_objects
+from models.base import Base
 
 
 class Rectangle(Base):
-    """_summary_
-
-    Args:
-        Base (_type_): _description_
+    """Rectagle class inherite from Base class
     """
-    def __init__(self, width, height, x=0, y=0, id=None):
-        """_summary_
 
-        Args:
-            width (_type_): _description_
-            height (_type_): _description_
-            x (int, optional): _description_. Defaults to 0.
-            y (int, optional): _description_. Defaults to 0.
-            id (_type_, optional): _description_. Defaults to None.
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """It initialize all the value
         """
         super().__init__(id)
         self.width = width
