@@ -87,5 +87,6 @@ class Rectangle(Base):
             print()
     
     def __str__(self):
+        """Print string represention of this object"""
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, \
             self.y, self.width, self.height)
