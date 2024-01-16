@@ -11,8 +11,12 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """It initalize the value of id only if the id
-        contains a number else it return the number of object
+        """This function initialise value of id
+        it checks if id is None if true it returns the number
+        of object instead
+
+        Args:
+            id: holds the value of id.
         """
 
         if id is not None:
