@@ -2,4 +2,4 @@
 -- first_table from the database hbtn_0c_0 in your MySQL server.
 
 
-SHOW COLUMNS FROM `first_table`;
+SHOW CREATE TABLE `first_table`;
