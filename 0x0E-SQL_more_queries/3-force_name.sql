@@ -2,7 +2,7 @@
 
 CREATE TABLE 
     IF NOT EXISTS force_name(
-    force_name TEXT,
+    force_name TEXT(6545),
     id INTEGER,
     name VARCHAR(256) NOT NULL
     );
