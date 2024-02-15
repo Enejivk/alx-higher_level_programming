@@ -6,7 +6,8 @@ CREATE DATABASE
 
 USE hbtn_0d_usa;
 
-CREATE TABLE your_table_name (
+CREATE TABLE 
+IF NOT EXISTS state(
     id INT AUTO_INCREMENT NOT NULL UNIQUE,
     name VARCHAR(256) NOT NULL,
     PRIMARY KEY (id)
