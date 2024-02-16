@@ -11,5 +11,5 @@ CREATE TABLE
     id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
     state_id INTEGER NOT NULL,
     name VARCHAR(256) NOT NULL,
-    FOREIGN KEY(state_id) REFERENCES state(id)
+    FOREIGN KEY(state_id) REFERENCES states(id)
     );
