@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
 const comments = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for( const comment of comments){
-    console.log(comment);
+let i;
+for (i = 0; i < comments.length; i++){
+    console.log(comments[i]);
 }
