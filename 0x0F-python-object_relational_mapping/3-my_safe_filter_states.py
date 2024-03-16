@@ -1,34 +1,26 @@
+#!/usr/bin/python3
+"""Script that returns a database based on the argument"""
+"""Adjusting the code to prevent again SQL Injection"""
 
-"""
-    A script that lists all states from the database hbtn_0e_0_usa
-    starting with capital letter N
-    Username, password and database names are given as user args
-"""
-
-
-import sys
 import MySQLdb
+from sys import argv
 
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3],
-                         host='localhost',
-                         port=3306)
+    db = MySQLdb.connect(host='localhost',
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3],
+                         port=3306
+                         )
+    cur = db.cursor()    
+    query = """SELECT * FROM states
+            WHERE name LIKE BINARY %s
+            ORDER BY id ASC"""
 
-    cursor = db.cursor()
-
-    sql = """SELECT * FROM states
-          WHERE name = %s
-          ORDER BY id ASC"""
-
-    cursor.execute(sql, (sys.argv[4],))
-
-    data = cursor.fetchall()
-
-    for row in data:
+    cur.execute(query, (argv[4],))
+    rows = cur.fetchall()
+    for row in rows:
         print(row)
-
-    cursor.close()
+    cur.close()
     db.close()
