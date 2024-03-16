@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
 """python script that execute Mysql query and return only character
 starting with capital letter N"""
+
 
 import MySQLdb
 from sys import argv
