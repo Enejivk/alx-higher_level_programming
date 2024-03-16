@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """This python connect to the database and list
 content of hbtn_0e_0_usa database"""
 import MySQLdb
@@ -20,4 +19,5 @@ if __name__ == '__main__':
         print(item)
     cur.close()
     db.close()
+
     
