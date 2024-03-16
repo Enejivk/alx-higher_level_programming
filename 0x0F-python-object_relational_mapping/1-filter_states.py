@@ -18,3 +18,6 @@ if __name__ == '__main__':
     data = cur.fetchall()
     for item in data:
         print(item)
+    cur.close()
+    db.close()
+    
