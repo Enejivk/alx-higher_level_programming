@@ -12,4 +12,3 @@ if __name__ == '__main__':
     cur.execute("SELECT id, name FROM states")
     for items in cur:
         print(items)
-        
