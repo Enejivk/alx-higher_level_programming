@@ -11,18 +11,12 @@ if __name__ == '__main__':
                          db=argv[3],
                          port=3306
                          )
-    cur = db.cursor()
-    argument = argv[4]
-    newArgument = ''
-    for character in argument:
-        character.isalnum()
-        newArgument += character
-    
+    cur = db.cursor()    
     query = """ SELECT * FROM states
-            WHERE name LIKE BINARY "{}"
-            ORDER BY id ASC """.format(newArgument)
+            WHERE name LIKE BINARY %s
+            ORDER BY id ASC """
 
-    cur.execute(query)
+    cur.execute(query, argv[4])
     rows = cur.fetchall()
     for row in rows:
         print(row)
