@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+"""Script that returns a database based on the argument"""
+
 import MySQLdb
 from sys import argv
-"""Script that returns a database based on the argument"""
-"""Adjusting the code to prevent again SQL Injection"""
 
 
 if __name__ == '__main__':
