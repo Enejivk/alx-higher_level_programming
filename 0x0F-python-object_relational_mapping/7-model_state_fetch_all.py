@@ -13,6 +13,5 @@ if __name__ == '__main__':
                            .format(argv[1], argv[2], argv[3]))
     Session = sessionmaker(engine)
     session = Session()
-for id, state in session.query(State.id,State.name)\
-                        .order_by(State.id.asc()):
+for id, state in session.query(State.id, State.name).order_by(State.id.asc()):
     print("{}: {}".format(id, state))
