@@ -10,10 +10,9 @@ from sys import argv
 """Connecting to the database using engine method"""
 if __name__ == '__main__':
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                        .format(argv[1], argv[2], argv[3]))
-
-
+                           .format(argv[1], argv[2], argv[3]))
     Session = sessionmaker(engine)
     session = Session()
-    for id, state in session.query(State.id, State.name).order_by(State.id.asc()):
+    for id, state in session.query(State.id, State.name)\
+                                    .order_by(State.id.asc()):
         print("{}: {}".format(id, state))
