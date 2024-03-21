@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 from sqlalchemy import Column, Integer, String, create_engine
-# from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
+# from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 class State(Base):
