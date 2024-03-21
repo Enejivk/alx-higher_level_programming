@@ -2,8 +2,8 @@
 """Printing all the state and the Id of the state"""
 
 from sqlalchemy import create_engine
-# from sqlalchemy.ext.declarative import sessionmaker
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import sessionmaker
+# from sqlalchemy.orm import sessionmaker
 from model_state import State
 from sys import argv
 
