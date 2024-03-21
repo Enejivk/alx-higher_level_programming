@@ -7,6 +7,7 @@ Base = declarative_base()
 
 
 class State(Base):
+    """This is the blue print of the function"""
     __tablename__ = 'states'
     id = Column(Integer,
                 autoincrement=True,
