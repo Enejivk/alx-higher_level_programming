@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Printing all the state and the Id of the state"""
+"""script that prints the first State object from the database hbtn_0e_6_usa"""
 
 from sqlalchemy import create_engine
 # from sqlalchemy.ext.declarative import sessionmaker
