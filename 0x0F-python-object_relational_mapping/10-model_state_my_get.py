@@ -13,8 +13,8 @@ if __name__ == '__main__':
 
     Session = sessionmaker(engine)
     session = Session()
-    search_string = argv[4] 
-    part = session.query(State).filter(State.name.like(search_string)).all()
+    search_string = '%' + argv[4] + '%'
+    part = session.query(State).filter(State.name.ilike(search_string)).all()
     if part:
         for value in part:
             print('{}: {}'.format(value.id, value.name))
