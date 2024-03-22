@@ -17,6 +17,6 @@ if __name__ == '__main__':
     part = session.query(State).filter(State.name.ilike(search_string)).all()
     if part:
         for value in part:
-            print('{}: {}'.format(value.id, value.name))
+            print(value.id)
     else:
         print("Not found")
