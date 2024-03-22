@@ -7,14 +7,14 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
 from sys import argv
 
-engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-                       .format(argv[1], argv[2], argv[3]))
-Session = sessionmaker(engine)
-session = Session()
-update_string = (update(State)
-                 .where(State.id == 2)
-                 .values(name='New Mexico')
-                 )
-session.execute(update_string)
-session.commit()
-session.close()
+if __name__ == '__main__':
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(argv[1], argv[2], argv[3]))
+    Session = sessionmaker(engine)
+    session = Session()
+    update_string = (update(State)
+                     .where(State.id == 2)
+                     .values(name='New Mexico'))
+    session.execute(update_string)
+    session.commit()
+    session.close()
