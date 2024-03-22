@@ -8,6 +8,7 @@ from sys import argv
 
 Base = declarative_base()
 
+
 class City(Base):
     """creating a city table"""
 
