@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""inner join in sqlalchemy"""
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
