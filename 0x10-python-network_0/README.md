@@ -1,5 +1,4 @@
 # 0x10. Python - Network #0
-
 ## General concept page
 <ul>
 <li>what a URL is</li>
