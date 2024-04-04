@@ -3,6 +3,7 @@
 using divide and conquer for finding the largest number
 """
 
+
 def find_peak(list_of_integers):
     """A peak element if found, otherwise None.
     """
