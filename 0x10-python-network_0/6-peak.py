@@ -3,10 +3,8 @@
 def find_peak(list_of_integers):
     """
     Finds a peak in a list of unsorted integers.
-
     Args:
     - list_of_integers: A list of unsorted integers.
-
     Returns:
     - A peak element if found, otherwise None.
     """
@@ -21,6 +19,4 @@ def find_peak(list_of_integers):
             left = mid + 1
         else:
             right = mid
-
     return list_of_integers[left]
-
