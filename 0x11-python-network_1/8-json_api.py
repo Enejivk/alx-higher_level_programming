@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if jsonRep == {}:
             print("No result")
         else:
-            print("[{}] {}".format(jsonRep.get("name"), jsonRep.get("id")))
+            print("[{}] {}".format(jsonRep.get("id"), jsonRep.get("name")))
     except ValueError:
         print("Not a valid JSON")    
