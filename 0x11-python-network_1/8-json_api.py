@@ -7,22 +7,17 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    if len(argv) < 2:
-        print("Usage: python script.py [letter]")
-        exit(1)
-
-    letter = argv[1]
+    if argv[1]:
+        letter = argv[1]
+    else:
+        letter = ""
     payload = {'q': letter}
-    
+    r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     try:
-        r = requests.post('http://localhost:5000/search_user', data=payload)
-        r.raise_for_status()  # Raise an error for bad status codes
         jsonRep = r.json()
-        if jsonRep:
-            print("[{}] {}".format(jsonRep.get("name"), jsonRep.get("id")))
-        else:
+        if jsonRep == {}:
             print("No result")
+        else:
+            print("[{}] {}".format(jsonRep.get("id"), jsonRep.get("name")))
     except ValueError:
-        print("Not a valid JSON")
-    except Exception as e:
-        print("Error:", e)
+        print("Not a valid JSON")    
