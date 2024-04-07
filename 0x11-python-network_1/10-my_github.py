@@ -15,4 +15,3 @@ if __name__ == "__main__":
     url = "https://api.github.com/users/{}".format(user_name)
     request = requests.get(url, auth=basic)
     print(request.json().get('id'))
-    print(request.json())
